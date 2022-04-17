@@ -14,6 +14,28 @@ from .definitions import NewsV2
 from .definitions import Publisher
 from .definitions import Earning
 from .definitions import Financial
+
+from .definitions import FinancialsBeta
+from .definitions import FinancialsAssetsBeta
+from .definitions import FinancialsBalanceSheetBeta
+from .definitions import FinancialsBasicEarningsPerShareBeta
+from .definitions import FinancialsCashFlowStatementBeta
+from .definitions import FinancialsComprehensiveIncomeBeta
+from .definitions import FinancialsComprehensiveIncomeLossBeta
+from .definitions import FinancialsComprehensiveIncomeLossAttributableToParentBeta
+from .definitions import FinancialsCostOfRevenueBeta
+from .definitions import FinancialsEquityBeta
+from .definitions import FinancialsExchangeGainsLossesBeta
+from .definitions import FinancialsFinancialsBeta
+from .definitions import FinancialsGrossProfitBeta
+from .definitions import FinancialsIncomeStatementBeta
+from .definitions import FinancialsLiabilitiesBeta
+from .definitions import FinancialsNetCashFlowBeta
+from .definitions import FinancialsNetCashFlowFromFinancialActivitiesBeta
+from .definitions import FinancialsOperatingExpensesBeta
+from .definitions import FinancialsOtherComprehensiveIncomeLossBeta
+from .definitions import FinancialsRevenuesBeta
+
 from .definitions import Exchange
 from .definitions import Error
 from .definitions import NotFound
@@ -61,6 +83,7 @@ from .definitions import ReferenceLocalesApiResponse
 from .definitions import ReferenceStockSplitsApiResponse
 from .definitions import ReferenceStockDividendsApiResponse
 from .definitions import ReferenceStockFinancialsApiResponse
+from .definitions import ReferenceStockFinancialsBetaApiResponse
 from .definitions import ReferenceMarketStatusApiResponse
 from .definitions import ReferenceMarketHolidaysApiResponse
 from .definitions import StocksEquitiesExchangesApiResponse
@@ -174,6 +197,7 @@ name_to_class: typing.Dict[str, typing.Callable[[], typing.Type[AnyDefinition]]]
     "ReferenceStockSplitsApiResponse": ReferenceStockSplitsApiResponse,
     "ReferenceStockDividendsApiResponse": ReferenceStockDividendsApiResponse,
     "ReferenceStockFinancialsApiResponse": ReferenceStockFinancialsApiResponse,
+    "ReferenceStockFinancialsBetaApiResponse": ReferenceStockFinancialsBetaApiResponse,
     "ReferenceMarketStatusApiResponse": ReferenceMarketStatusApiResponse,
     "ReferenceMarketHolidaysApiResponse": ReferenceMarketHolidaysApiResponse,
     "StocksEquitiesExchangesApiResponse": StocksEquitiesExchangesApiResponse,

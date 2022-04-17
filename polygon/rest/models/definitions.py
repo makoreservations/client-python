@@ -3099,6 +3099,35 @@ class ReferenceStockFinancialsApiResponse(Definition):
 
 
 # noinspection SpellCheckingInspection
+class ReferenceStockFinancialsBetaApiResponse(Definition):
+    _swagger_name_to_python = {
+        "status": "status",
+        "count": "count",
+        "results": "results",
+
+    }
+
+    _attribute_is_primitive = {
+        "status": True,
+        "count": True,
+        "results": False,
+
+    }
+
+    _attributes_to_types = {
+        "status": "str",
+        "count": "float",
+        "results": "List[FinancialsBeta]",
+
+    }
+
+    def __init__(self):
+        self.status: str
+        self.count: float
+        self.results: List[FinancialsBeta]
+
+
+# noinspection SpellCheckingInspection
 class ReferenceMarketStatusApiResponse(Definition):
     _swagger_name_to_python = {
         "marketstatus": "marketstatus",
@@ -4178,3 +4207,321 @@ StockSymbol = str
 ConditionTypeMap = Dict[str, str]
 SymbolTypeMap = Dict[str, str]
 TickerSymbol = str
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# noinspection SpellCheckingInspection
+class FinancialsBeta(Definition):
+    _swagger_name_to_python = {
+        "cik": "cik",
+        "company_name": "company_name",
+        "end_date": "end_date",
+
+        "financials": "financials",
+
+        "fiscal_period": "fiscal_period",
+        "fiscal_year": "fiscal_year",
+        "source_filing_file_url": "source_filing_file_url",
+        "source_filing_url": "source_filing_url",
+
+    }
+
+    _attribute_is_primitive = {
+        "cik": True,
+        "company_name": True,
+        "end_date": True,
+
+        "financials": False,
+
+        "fiscal_period": True,
+        "fiscal_year": True,
+        "source_filing_file_url": True,
+        "source_filing_url": True,
+
+    }
+
+    _attributes_to_types = {
+        "cik": "str",
+        "company_name": "str",
+        "end_date": "str",
+
+        "financials": "FinancialsFinancialsBeta",
+
+        "fiscal_period": "int",
+        "fiscal_year": "int",
+        "source_filing_file_url": "str",
+        "source_filing_url": "str",
+
+    }
+
+    def __init__(self):
+        self.cik: str
+        self.company_name: str
+        self.end_date: str
+
+        self.financials: FinancialsFinancialsBeta
+
+        self.fiscal_period: int
+        self.fiscal_year: int
+        self.source_filing_file_url: str
+        self.source_filing_url: str
+
+
+# noinspection SpellCheckingInspection
+class FinancialsFinancialsBeta(Definition):
+    _swagger_name_to_python = {
+        "balance_sheet": "balance_sheet",
+        "cash_flow_statement": "cash_flow_statement",
+        "comprehensive_income": "comprehensive_income",
+        "income_statement": "income_statement"
+
+    }
+
+    _attribute_is_primitive = {
+        "balance_sheet": False,
+        "cash_flow_statement": False,
+        "comprehensive_income": False,
+        "income_statement": False
+
+    }
+
+    _attributes_to_types = {
+        "balance_sheet": "FinancialsBalanceSheetBeta",
+        "cash_flow_statement": "FinancialsCashFlowStatementBeta",
+        "comprehensive_income": "FinancialsComprehensiveIncomeBeta",
+        "income_statement": "FinancialsIncomeStatementBeta"
+
+    }
+
+    def __init__(self):
+        self.balance_sheet: FinancialsBalanceSheetBeta
+        self.cash_flow_statement: FinancialsCashFlowStatementBeta
+        self.comprehensive_income: FinancialsComprehensiveIncomeBeta
+        self.income_statement: FinancialsIncomeStatementBeta
+
+
+# noinspection SpellCheckingInspection
+class FinancialsBalanceSheetBeta(Definition):
+    _swagger_name_to_python = {
+        "assets": "assets",
+        "equity": "equity",
+        "liabilities": "liabilities"
+    }
+
+    _attribute_is_primitive = {
+        "assets": False,
+        "equity": False,
+        "liabilities": False
+
+    }
+
+    _attributes_to_types = {
+        "assets": "FinancialsAssetsBeta",
+        "equity": "FinancialsEquityBeta",
+        "liabilities": "FinancialsLiabilitiesBeta"
+
+    }
+
+    def __init__(self):
+        self.assets: FinancialsAssetsBeta
+        self.equity: FinancialsEquityBeta
+        self.liabilities: FinancialsLiabilitiesBeta
+
+
+# noinspection SpellCheckingInspection
+class FinancialsCashFlowStatementBeta(Definition):
+    _swagger_name_to_python = {
+        "exchange_gains_losses": "exchange_gains_losses",
+        "net_cash_flow": "net_cash_flow",
+        "net_cash_flow_from_financing_activities": "net_cash_flow_from_financing_activities"
+    }
+
+    _attribute_is_primitive = {
+        "exchange_gains_losses": False,
+        "net_cash_flow": False,
+        "net_cash_flow_from_financing_activities": False
+
+    }
+
+    _attributes_to_types = {
+        "exchange_gains_losses": "FinancialsExchangeGainsLossesBeta",
+        "net_cash_flow": "FinancialsNetCashFlowBeta",
+        "net_cash_flow_from_financing_activities": "FinancialsNetCashFlowFromFinancialActivitiesBeta"
+
+    }
+
+    def __init__(self):
+        self.exchange_gains_losses: FinancialsExchangeGainsLossesBeta
+        self.net_cash_flow: FinancialsNetCashFlowBeta
+        self.net_cash_flow_from_financing_activities: FinancialsNetCashFlowFromFinancialActivitiesBeta
+
+
+# noinspection SpellCheckingInspection
+class FinancialsComprehensiveIncomeBeta(Definition):
+    _swagger_name_to_python = {
+        "comprehensive_income_loss": "comprehensive_income_loss",
+        "comprehensive_income_loss_attributable_to_parent": "comprehensive_income_loss_attributable_to_parent",
+        "other_comprehensive_income_loss": "other_comprehensive_income_loss"
+    }
+
+    _attribute_is_primitive = {
+        "comprehensive_income_loss": False,
+        "comprehensive_income_loss_attributable_to_parent": False,
+        "other_comprehensive_income_loss": False
+
+    }
+
+    _attributes_to_types = {
+        "comprehensive_income_loss": "FinancialsComprehensiveIncomeLossBeta",
+        "comprehensive_income_loss_attributable_to_parent": "FinancialsComprehensiveIncomeLossAttributableToParentBeta",
+        "other_comprehensive_income_loss": "FinancialsOtherComprehensiveIncomeLossBeta"
+
+    }
+
+    def __init__(self):
+        self.comprehensive_income_loss: FinancialsComprehensiveIncomeLossBeta
+        self.comprehensive_income_loss_attributable_to_parent: FinancialsComprehensiveIncomeLossAttributableToParentBeta
+        self.other_comprehensive_income_loss: FinancialsOtherComprehensiveIncomeLossBeta
+
+
+# noinspection SpellCheckingInspection
+class FinancialsIncomeStatementBeta(Definition):
+    _swagger_name_to_python = {
+        "basic_earnings_per_share": "basic_earnings_per_share",
+        "cost_of_revenue": "cost_of_revenue",
+        "gross_profit": "gross_profit",
+        "operating_expenses": "operating_expenses",
+        "revenues": "revenues"
+
+    }
+
+    _attribute_is_primitive = {
+        "basic_earnings_per_share": False,
+        "cost_of_revenue": False,
+        "gross_profit": False,
+        "operating_expenses": False,
+        "revenues": False
+
+    }
+
+    _attributes_to_types = {
+        "basic_earnings_per_share": "FinancialsBasicEarningsPerShareBeta",
+        "cost_of_revenue": "FinancialsCostOfRevenueBeta",
+        "gross_profit": "FinancialsGrossProfitBeta",
+        "operating_expenses": "FinancialsOperatingExpensesBeta",
+        "revenues": "FinancialsRevenuesBeta"
+
+    }
+
+    def __init__(self):
+        self.basic_earnings_per_share: FinancialsBasicEarningsPerShareBeta
+        self.cost_of_revenue: FinancialsCostOfRevenueBeta
+        self.gross_profit: FinancialsGrossProfitBeta
+        self.operating_expenses: FinancialsOperatingExpensesBeta
+        self.revenues: FinancialsRevenuesBeta
+
+
+# noinspection SpellCheckingInspection
+class FinancialsObjectWithXpathBeta(Definition):
+    _swagger_name_to_python = {
+        "label": "label",
+        "order": "order",
+        "unit": "unit",
+        "value": "value",
+        "xpath": "xpath"
+    }
+
+    _attribute_is_primitive = {
+        "label": True,
+        "order": True,
+        "unit": True,
+        "value": True,
+        "xpath": True
+
+    }
+
+    _attributes_to_types = {
+        "label": "str",
+        "order": "int",
+        "unit": "str",
+        "value": "int",
+        "xpath": "str"
+
+    }
+
+    def __init__(self):
+        self.label: str
+        self.order: int
+        self.unit: str
+        self.value: int
+        self.xpath: str
+
+
+# noinspection SpellCheckingInspection
+class FinancialsObjectWithFormulaBeta(Definition):
+    _swagger_name_to_python = {
+        "formula": "formula",
+        "label": "label",
+        "order": "order",
+        "unit": "unit",
+        "value": "value"
+    }
+
+    _attribute_is_primitive = {
+        "formula": True,
+        "label": True,
+        "order": True,
+        "unit": True,
+        "value": True
+
+    }
+
+    _attributes_to_types = {
+        "formula": "str",
+        "label": "str",
+        "order": "int",
+        "unit": "str",
+        "value": "float"
+
+    }
+
+    def __init__(self):
+        self.formula: str
+        self.label: str
+        self.order: int
+        self.unit: str
+        self.value: float
+
+
+FinancialsAssetsBeta = FinancialsObjectWithXpathBeta
+FinancialsEquityBeta = FinancialsObjectWithFormulaBeta
+FinancialsLiabilitiesBeta = FinancialsObjectWithXpathBeta
+
+FinancialsExchangeGainsLossesBeta = FinancialsObjectWithXpathBeta
+FinancialsNetCashFlowBeta = FinancialsObjectWithFormulaBeta
+FinancialsNetCashFlowFromFinancialActivitiesBeta = FinancialsObjectWithXpathBeta
+
+FinancialsComprehensiveIncomeLossBeta = FinancialsObjectWithFormulaBeta
+FinancialsComprehensiveIncomeLossAttributableToParentBeta = FinancialsObjectWithXpathBeta
+FinancialsOtherComprehensiveIncomeLossBeta = FinancialsObjectWithFormulaBeta
+
+FinancialsBasicEarningsPerShareBeta = FinancialsObjectWithXpathBeta
+FinancialsCostOfRevenueBeta = FinancialsObjectWithXpathBeta
+FinancialsGrossProfitBeta = FinancialsObjectWithXpathBeta
+FinancialsOperatingExpensesBeta = FinancialsObjectWithFormulaBeta
+FinancialsRevenuesBeta = FinancialsObjectWithXpathBeta
